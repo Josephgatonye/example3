@@ -1,0 +1,26 @@
+---
+title:"Example Rmd Report"
+author:" Mark and Udari"
+output:html_document
+theme:cosmo
+---
+
+## Heading number 1 -download file and read into R
+Here we're using the 'download.file()' command to obtain the dataset
+then we're reading it into R.It is important to set the 'header = TRUE' and 'row.names =1 so that the data is formatted properly'
+```{r,chunk1,echo=TRUE}
+#Download the data
+download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/bioinfo_asst3_part1_files/mydata.tsv",destfile = "mydata.tsv")
+
+#Read into R making sure the 1st column is set as the row names and headers are recognized
+x <-read.table("mydata.tsv",header =TRUE,stringsAsFactors = FALSE, row.names = 1)
+```
+## Heading 2 - checking data integrity
+Here we use the 'head()'command to look at the first 6 lines of the data frame, then 'str()' to make sure that the contents are recognised as numeric
+
+```{r,chunk2,echo=TRUE}
+# Lets check if the data has been imported properly
+head(x)
+
+# check data structure
+str(x)
