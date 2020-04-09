@@ -12,4 +12,4 @@ Help students learn about Github and Mardown format
 Rstudio Version 1.2.1335 and Rversion 3.6.3
 
 ## Credits
-Mark Ziemann
+Mark Ziemann and Udari
